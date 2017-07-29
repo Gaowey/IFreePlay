@@ -36,5 +36,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile files('libs/wechat-sdk-android-with-mta-1.3.4.jar')
     compile 'com.facebook.android:facebook-android-sdk:4.+'
-    compile(name: 'line-sdk-4.0.5', ext: 'aar')
+
 }
