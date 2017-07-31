@@ -44,6 +44,7 @@ public class WeChatLoginUtil {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if(action.equals("authlogin")){
+                Log.d("weixin","backbroadcast：");
                 getAccessToken();
             }
         }
@@ -201,6 +202,7 @@ public class WeChatLoginUtil {
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     User user = new User();
+                    Log.d("weixin","user："+response);
                     if (jsonObject.getString("nickname")!=null){
                         user.setUserName(jsonObject.getString("nickname"));
                     }
@@ -220,6 +222,7 @@ public class WeChatLoginUtil {
             @Override
             public void onError(Exception e) {
                 mWeChatLoginStateChanged.OnLoginError("通过openid获取数据没有成功");
+                Log.d("weixin","通过openid获取数据没有成功：");
             }
         });
     }

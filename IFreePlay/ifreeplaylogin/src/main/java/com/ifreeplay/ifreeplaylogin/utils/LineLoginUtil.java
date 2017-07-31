@@ -79,7 +79,7 @@ public class LineLoginUtil {
                 @Override
                 public void onClick(View v) {
                     try{
-                       /* Intent loginIntent = LineLoginApi.getLoginIntent(v.getContext(), mChannelId1);
+                        /*Intent loginIntent = LineLoginApi.getLoginIntent(v.getContext(), mChannelId1);
                         loginActivity.startActivityForResult(loginIntent, LoginManager.LineRequestCode);*/
                     }
                     catch(Exception e) {
@@ -104,9 +104,9 @@ public class LineLoginUtil {
         }
     }
 
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        //LineLoginResult result = LineLoginApi.getLoginResultFromIntent(data);
-       /* switch (result.getResponseCode()) {
+   /* public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        LineLoginResult result = LineLoginApi.getLoginResultFromIntent(data);
+        switch (result.getResponseCode()) {
             case SUCCESS:
                 fetchUserInfo(result);
                 break;
@@ -119,10 +119,10 @@ public class LineLoginUtil {
             default:
                 // Login canceled due to other error
                 mLineLoginStateChanged.OnLoginError(result.getErrorData().toString());
-        }*/
+        }
     }
 
-   /* private void fetchUserInfo(LineLoginResult result) {
+    private void fetchUserInfo(LineLoginResult result) {
         User user = new User();
         try {
             *//*if (result.getLineProfile()!=null){
