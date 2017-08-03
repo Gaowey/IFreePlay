@@ -9,10 +9,10 @@ import android.view.View;
 import com.ifreeplay.ifreeplaylogin.bean.User;
 import com.ifreeplay.ifreeplaylogin.logininterface.LogInStateListener;
 import com.ifreeplay.ifreeplaylogin.logininterface.LogOutStateListener;
-/*import com.linecorp.linesdk.api.LineApiClient;
+import com.linecorp.linesdk.api.LineApiClient;
 import com.linecorp.linesdk.api.LineApiClientBuilder;
 import com.linecorp.linesdk.auth.LineLoginApi;
-import com.linecorp.linesdk.auth.LineLoginResult;*/
+import com.linecorp.linesdk.auth.LineLoginResult;
 
 /**
  * Created by gaowe on 2017/7/19.
@@ -29,7 +29,7 @@ public class LineLoginUtil {
     private String mChannelId1;
     private boolean isLogOut=false;
     private Context mLineLogOutContext;
-    //private LineApiClient lineApiClient;
+    private LineApiClient lineApiClient;
 
     public static LineLoginUtil getInstance(Context context) {
         if(mLineLoginUtil ==null){
@@ -79,8 +79,8 @@ public class LineLoginUtil {
                 @Override
                 public void onClick(View v) {
                     try{
-                        /*Intent loginIntent = LineLoginApi.getLoginIntent(v.getContext(), mChannelId1);
-                        loginActivity.startActivityForResult(loginIntent, LoginManager.LineRequestCode);*/
+                        Intent loginIntent = LineLoginApi.getLoginIntent(v.getContext(), mChannelId1);
+                        loginActivity.startActivityForResult(loginIntent, LoginManager.LineRequestCode);
                     }
                     catch(Exception e) {
                         Log.e("ERROR", e.toString());
@@ -94,9 +94,9 @@ public class LineLoginUtil {
                 @Override
                 public void onClick(View v) {
                     //初始化lineApiClient
-                   /* LineApiClientBuilder apiClientBuilder = new LineApiClientBuilder(mLineLogOutContext, mChannelId1);
+                    LineApiClientBuilder apiClientBuilder = new LineApiClientBuilder(mLineLogOutContext, mChannelId1);
                     lineApiClient = apiClientBuilder.build();
-                    lineApiClient.logout();*/
+                    lineApiClient.logout();
                     isLogOut=true;
                     mLineLogOutStateListener.OnLogOutListener(isLogOut,"line");
                 }
@@ -104,7 +104,7 @@ public class LineLoginUtil {
         }
     }
 
-   /* public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         LineLoginResult result = LineLoginApi.getLoginResultFromIntent(data);
         switch (result.getResponseCode()) {
             case SUCCESS:
@@ -125,9 +125,9 @@ public class LineLoginUtil {
     private void fetchUserInfo(LineLoginResult result) {
         User user = new User();
         try {
-            *//*if (result.getLineProfile()!=null){
+            if (result.getLineProfile()!=null){
             user.setLineProfile(result.getLineProfile().toString());
-        }*//*
+        }
             if (result.getLineProfile().getDisplayName()!=null){
                 user.setUserName(result.getLineProfile().getDisplayName());
             }
@@ -142,7 +142,7 @@ public class LineLoginUtil {
             mLineLoginStateChanged.OnLoginError(e.getMessage());
         }
 
-    }*/
+    }
 
 
 }

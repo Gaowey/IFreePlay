@@ -106,7 +106,7 @@ public  class LoginManager {
         if (requestCode==64206&&fbUtil!=null){
             fbUtil.onActivityResult(requestCode, resultCode, data);
         }else if (requestCode==101&&lineUtil!=null){
-            //lineUtil.onActivityResult(requestCode, resultCode, data);
+            lineUtil.onActivityResult(requestCode, resultCode, data);
         }
     }
 }
