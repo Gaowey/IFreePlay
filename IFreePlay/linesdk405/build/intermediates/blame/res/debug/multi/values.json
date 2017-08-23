@@ -1,0 +1,49 @@
+[
+    {
+        "outputFile": "D:\\IFreePlay\\IFreePlay\\linesdk405\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 5,
+                    "endColumn": 12,
+                    "endOffset": 288
+                },
+                "from": {
+                    "file": "D:\\IFreePlay\\IFreePlay\\linesdk405\\src\\main\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endLine": 5,
+                        "endColumn": 12,
+                        "endOffset": 288
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 293,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 775
+                },
+                "from": {
+                    "file": "D:\\IFreePlay\\IFreePlay\\linesdk405\\src\\main\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 293,
+                        "endLine": 13,
+                        "endColumn": 12,
+                        "endOffset": 775
+                    }
+                }
+            }
+        ]
+    }
+]

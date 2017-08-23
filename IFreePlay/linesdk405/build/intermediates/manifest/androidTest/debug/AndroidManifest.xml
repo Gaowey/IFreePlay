@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.linecorp.linesdk.test" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:functionalTest="false"
+        android:handleProfiling="false"
+        android:label="Tests for com.linecorp.linesdk.test"
+        android:targetPackage="com.linecorp.linesdk.test" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true" >
+        <uses-library android:name="android.test.runner" />
+        <!--
+         "launchMode" of this activity must not be singleInstance and singleTask because, this is
+         launched with using startActivityForResult().
+         This activity must be stacked on same Activity Stack of the caller.
+        -->
+        <activity
+            android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/LineSdk_AuthenticationActivity" />
+        <activity
+            android:name="com.linecorp.linesdk.auth.internal.LineAuthenticationCallbackActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="lineauth" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
