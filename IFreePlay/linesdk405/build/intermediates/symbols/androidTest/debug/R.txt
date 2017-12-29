@@ -1,0 +1,3 @@
+int layout linesdk_activity_lineauthentication 0x7f020000
+int style LineSdk_AuthActivityAnimationStyle 0x7f030000
+int style LineSdk_AuthenticationActivity 0x7f030001

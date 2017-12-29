@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="debug$Generated" generated="true"><source path="D:\IFreePlay\IFreePlay\linesdk405\build\intermediates\bundles\debug\res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="D:\IFreePlay\IFreePlay\linesdk405\src\androidTest\res"/><source path="D:\IFreePlay\IFreePlay\linesdk405\build\generated\res\rs\androidTest\debug"/><source path="D:\IFreePlay\IFreePlay\linesdk405\build\generated\res\resValues\androidTest\debug"/></dataSet><dataSet config="debug" from-dependency="true" generated-set="debug$Generated"><source path="D:\IFreePlay\IFreePlay\linesdk405\build\intermediates\bundles\debug\res"><file name="linesdk_activity_lineauthentication" path="D:\IFreePlay\IFreePlay\linesdk405\build\intermediates\bundles\debug\res\layout\linesdk_activity_lineauthentication.xml" qualifiers="" type="layout"/><file path="D:\IFreePlay\IFreePlay\linesdk405\build\intermediates\bundles\debug\res\values\values.xml" qualifiers=""><style name="LineSdk_AuthenticationActivity">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/LineSdk_AuthActivityAnimationStyle</item>
+    </style><style name="LineSdk_AuthActivityAnimationStyle">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\IFreePlay\IFreePlay\linesdk405\src\androidTest\res"/><source path="D:\IFreePlay\IFreePlay\linesdk405\build\generated\res\rs\androidTest\debug"/><source path="D:\IFreePlay\IFreePlay\linesdk405\build\generated\res\resValues\androidTest\debug"/></dataSet><mergedItems/></merger>
