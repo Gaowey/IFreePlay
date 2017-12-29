@@ -12,6 +12,7 @@ import com.ifreeplay.ifreeplaysdk.interfaces.LogOutStateListener;
  */
 
 public  class LoginManager {
+
     private static FaceBookLogin fbUtil=null;
     private static LineLogin lineUtil=null;
     private static WeChatLogin wechatUtil=null;
