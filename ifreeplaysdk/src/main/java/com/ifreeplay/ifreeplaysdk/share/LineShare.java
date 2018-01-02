@@ -12,7 +12,7 @@ import android.provider.MediaStore;
  */
 
 public class LineShare {
-    private static Activity mActivity;
+    /*private static Activity mActivity;
     private static LineShare lineShare;
 
     public static LineShare initialize(Activity activity){
@@ -21,13 +21,13 @@ public class LineShare {
             lineShare = new LineShare();
         }
         return lineShare;
-    }
+    }*/
 
     /**
      * 分享文本
      * @param content
      */
-    public void shareText(String content){
+    /*public void shareText(String content){
         ComponentName cn = new ComponentName("jp.naver.line.android"
                 , "jp.naver.line.android.activity.selectchat.SelectChatActivity");
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
@@ -43,9 +43,9 @@ public class LineShare {
         Intent shareIntent = new Intent(Intent.ACTION_SEND);
         Uri uri = Uri.parse(MediaStore.Images.Media.insertImage(mActivity.getContentResolver(), bitmap, null,null));
         shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
-        shareIntent.setType("image/*"); //图片分享
+        shareIntent.setType("image*//*"); //图片分享
         shareIntent.setComponent(cn);
         mActivity.startActivity(Intent.createChooser(shareIntent, "分享"));
     }
-
+*/
 }

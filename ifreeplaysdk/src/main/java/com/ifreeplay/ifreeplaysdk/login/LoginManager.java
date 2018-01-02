@@ -13,7 +13,7 @@ import com.ifreeplay.ifreeplaysdk.interfaces.LogOutStateListener;
 
 public  class LoginManager {
     private static FaceBookLogin fbUtil=null;
-    private static LineLogin lineUtil=null;
+    //private static LineLogin lineUtil=null;
     private static WeChatLogin wechatUtil=null;
     public static final  int LineRequestCode=101;
     public static final  int FaceBookRequestCode=64206;
@@ -38,10 +38,10 @@ public  class LoginManager {
         fbUtil= FaceBookLogin.getInstance(mContext, mGameId);
     }
 
-    public void initLineLogin(){
+    /*public void initLineLogin(){
         lineUtil = LineLogin.getInstance(mContext, mGameId);
     }
-
+*/
     public void initWechatLogin(){
         wechatUtil = WeChatLogin.getInstance(mContext, mGameId);
     }
@@ -71,12 +71,12 @@ public  class LoginManager {
      * @param activity
      * @param loginstateListener
      */
-    public void setLineLoginParams(Activity activity,String channelId, LogInStateListener loginstateListener){
+    /*public void setLineLoginParams(Activity activity,String channelId, LogInStateListener loginstateListener){
         lineUtil.SetLineLoginActivity(activity);
         lineUtil.SetOnLineLoginStateListener(loginstateListener);
         lineUtil.SetLineLoginChinnalId(channelId);
         lineUtil.open();
-    }
+    }*/
 
     /**
      * 如果要使用Wechat登录时需调用这个方法
@@ -101,18 +101,17 @@ public  class LoginManager {
 
     /**
      * 退出line登录时调用
-     * @param logOutStateListener
      */
-    public void setLineLogOutParams(LogOutStateListener logOutStateListener, Context LogOutContext){
+    /*public void setLineLogOutParams(LogOutStateListener logOutStateListener, Context LogOutContext){
         lineUtil.SetOnLineLogOutListener(logOutStateListener);
         lineUtil.setLineLogOutContext(LogOutContext);
         lineUtil.logOut();
-    }
+    }*/
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode==64206&&fbUtil!=null){
             fbUtil.onActivityResult(requestCode, resultCode, data);
-        }else if (requestCode==101&&lineUtil!=null){
+        }/*else if (requestCode==101&&lineUtil!=null){
             lineUtil.onActivityResult(requestCode, resultCode, data);
-        }
+        }*/
     }
 }
